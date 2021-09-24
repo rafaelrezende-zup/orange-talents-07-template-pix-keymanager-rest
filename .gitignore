@@ -1,0 +1,21 @@
+Thumbs.db
+key-manager-rest/.DS_Store
+key-manager-rest/.gradle
+key-manager-rest/build/
+key-manager-rest/target/
+key-manager-rest/out/
+key-manager-rest/.project
+key-manager-rest/.settings
+key-manager-rest/.classpath
+key-manager-rest/.factorypath
+
+HELP.md
+key-manager-rest/!.mvn/wrapper/maven-wrapper.jar
+key-manager-rest/!**/src/main/**/target/
+key-manager-rest/!**/src/test/**/target/
+
+### IntelliJ IDEA ###
+key-manager-rest/.idea
+key-manager-rest/*.iws
+key-manager-rest/*.iml
+key-manager-rest/*.ipr
