@@ -1,6 +1,7 @@
 package br.com.zup.grpc
 
 import br.com.zup.KeymanagerCadastraGrpcServiceGrpc
+import br.com.zup.KeymanagerConsultaGrpcServiceGrpc
 import br.com.zup.KeymanagerRemoveGrpcServiceGrpc
 import io.grpc.ManagedChannel
 import io.micronaut.context.annotation.Factory
@@ -15,5 +16,8 @@ class KeyManagerGrpcFactory(@GrpcChannel("keymanager") val channel: ManagedChann
 
     @Singleton
     fun removeChavePix() = KeymanagerRemoveGrpcServiceGrpc.newBlockingStub(channel)
+
+    @Singleton
+    fun consultaChavePix() = KeymanagerConsultaGrpcServiceGrpc.newBlockingStub(channel)
 
 }
