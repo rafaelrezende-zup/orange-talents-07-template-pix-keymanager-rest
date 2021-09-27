@@ -17,6 +17,7 @@ class CadastraChavePixController(private val cadastraChavePixClient: KeymanagerC
 
     @Post
     fun cadastra(idCliente: String, @Valid @Body request: CadastraChavePixRequest): HttpResponse<Any> {
+        logger.info("Iniciando fluxo de cadastro de nova chave pix: $request")
         val response = cadastraChavePixClient.cadastra(request.paraNovaChavePixResponse(idCliente))
         return HttpResponse.created(HttpResponse.uri("/cliente/$idCliente/pix/${response.idPix}"))
     }
