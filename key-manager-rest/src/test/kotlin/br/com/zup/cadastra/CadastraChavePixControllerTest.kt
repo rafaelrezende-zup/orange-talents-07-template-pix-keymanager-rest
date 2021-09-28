@@ -2,7 +2,7 @@ package br.com.zup.cadastra
 
 import br.com.zup.KeymanagerCadastraGrpcServiceGrpc
 import br.com.zup.NovaChavePixResponse
-import br.com.zup.grpc.KeyManagerGrpcFactory
+import br.com.zup.config.grpc.KeyManagerGrpcFactory
 import io.micronaut.context.annotation.Factory
 import io.micronaut.context.annotation.Replaces
 import io.micronaut.http.HttpRequest

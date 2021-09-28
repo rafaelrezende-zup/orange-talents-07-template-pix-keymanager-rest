@@ -15,7 +15,7 @@ class ConsultaChavePixController(private val consultaChavePixClient: KeymanagerC
 
     @Get
     fun consulta(idCliente: String, pixId: String): HttpResponse<Any> {
-        logger.info("Iniciando fluxo de remoção de chave pix: $pixId")
+        logger.info("Iniciando fluxo de consulta de chave pix: $pixId")
         val response = consultaChavePixClient.consulta(ConsultaChavePixRequest
             .newBuilder()
             .setPixId(ConsultaChavePixRequest.ConsultaPixId

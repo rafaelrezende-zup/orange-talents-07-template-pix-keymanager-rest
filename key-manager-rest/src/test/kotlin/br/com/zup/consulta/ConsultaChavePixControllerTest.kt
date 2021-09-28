@@ -2,7 +2,7 @@ package br.com.zup.consulta
 
 import br.com.zup.*
 import br.com.zup.cadastra.CadastraChavePixRequest
-import br.com.zup.grpc.KeyManagerGrpcFactory
+import br.com.zup.config.grpc.KeyManagerGrpcFactory
 import br.com.zup.remove.RemoveChavePixControllerTest
 import com.google.protobuf.Timestamp
 import io.micronaut.context.annotation.Factory
@@ -48,7 +48,7 @@ internal class ConsultaChavePixControllerTest {
         val response = client
             .toBlocking()
             .exchange(
-                HttpRequest.GET<Any>("/${UUID_RANDOM}/pix/${RemoveChavePixControllerTest.UUID_RANDOM}"),
+                HttpRequest.GET<Any>("/$UUID_RANDOM/pix/$UUID_RANDOM"),
                 Any::class.java
             )
 
